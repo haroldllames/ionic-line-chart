@@ -1,14 +1,84 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+    
+      <ion-navbar>
+        <ion-title> <ion-icon name="settings"></ion-icon> Statistic Config</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only (click)="presentActionSheet()" >
+          <ion-icon class="color-picker" name="color-fill"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    
+    </ion-header>
+<ion-content>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-list-header>
+      <span>January</span>
+      <ion-badge item-end color="light">{{January}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="1" max="50" [(ngModel)]="January" #jan (ngModelChange)="sendRate(jan.value, 'January')" color="secondary">
+      </ion-range>
+    </ion-item>
+  </ion-list>  
+
+  <ion-list>
+    <ion-list-header>
+        <span>February</span>  
+      <ion-badge item-end color="light">{{February}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="1" max="50" [(ngModel)]="February" #feb (ngModelChange)="sendRate(feb.value, 'February')" color="primary">
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+        <span>March</span>  
+      <ion-badge item-end color="light">{{March}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="1" max="50" [(ngModel)]="March" #mar (ngModelChange)="sendRate(mar.value, 'March')" color="danger">
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+        <span>April</span>  
+      <ion-badge item-end color="light">{{April}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="1" max="50" [(ngModel)]="April" #apr (ngModelChange)="sendRate(apr.value, 'April')" color="blueGreen">
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-list-header>
+        <span>May</span>  
+      <ion-badge item-end color="light">{{May}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="1" max="50" [(ngModel)]="May" #may (ngModelChange)="sendRate(may.value, 'May')" color="dark">
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+        <span>June</span>  
+      <ion-badge item-end color="light">{{June}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="1" max="50" [(ngModel)]="June" #jun (ngModelChange)="sendRate(jun.value, 'June')" color="pinkz">
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+
+
 </ion-content>
